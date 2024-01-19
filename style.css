@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --Cyan: #2bb3b1;
+    --Light-Dark-Cyan: #4abebd;
+    --Bright-Yellow: #c0df34;
+    --Light-Gray: #e6eff545;
+    --Grayish-Blue: #98a6bd;
+    --Blue: #3d52a3;
+    --Dark-White: #e6eff6;
+    --White: #ffffff;
+    --Karla: 'Karla';
+}
+
+* {
+    margin: 0;
+    /* make all the contents gather up to the top */
+    padding: 0;
+    /* make all the dent contents disappear */
+    box-sizing: border-box;
+    /* make width and height of the all element eligible to include the padding and border */
+    font-family: 'Karla';
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--Dark-White);
+}
+
+.content {
+    display: grid;
+    border-radius: 5px;
+    margin: 1.5em;
+    box-shadow: 5px 5px 25px var(--Grayish-Blue);
+    overflow: hidden;
+    max-width: 650px;
+}
+
+.section-top,
+.section-left,
+.section-right {
+    padding: 1.5em;
+    display: grid;
+}
+
+.header {
+    font-size: 1.2em;
+}
+
+.section-top {
+    background-color: var(--White);
+    row-gap: 1em;
+    /* gap between rows(each element) with in section */
+}
+
+.section-top .header {
+    /* same funciton as .section-top > .header */
+    color: var(--Cyan);
+    font-weight: 700;
+}
+
+.subheader {
+    color: var(--Bright-Yellow);
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.text {
+    color: var(--Grayish-Blue);
+    font-size: .9em;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.section-left {
+    background-color: var(--Cyan);
+    row-gap: .5em;
+}
+
+.left-bottom {
+    color: var(--White);
+    font-weight: 200;
+    padding-bottom: .5em;
+}
+
+.button {
+    text-decoration: none;
+    color: var(--White);
+    background-color: var(--Bright-Yellow);
+    padding: 1em;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1em;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.212);
+}
+
+.section-left .header {
+    color: var(--White);
+    font-size: 1.1em;
+}
+
+.left-middle {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+    padding: .5em 0 0;
+}
+
+.price {
+    font-size: 2em;
+    color: var(--White);
+}
+
+.per-month {
+    color: #ffffff80;
+    font-weight: 400;
+}
+
+.section-right {
+    background-color: var(--Light-Dark-Cyan);
+    row-gap: 15px;
+}
+
+.section-right .header {
+    color: var(--White);
+}
+
+.pros {
+    color: var(--White);
+    line-height: 25px;
+    font-weight: 200;
+}
+
+.attribution {
+    display: none;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--Light-Dark-Cyan);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+    color: var(--Bright-Yellow);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        height: 100vh;
+    }
+
+    .content {
+        max-width: 600px;
+    }
+
+    .section-top,
+    .section-left,
+    .section-right {
+        padding: 2.5em;
+    }
+
+    .section-top {
+        grid-area: 1 / 1 / 2/ 3;  /* grid-area: row-start,y1 / column-start, x1/ row-end, y2/ column-end, x2 */
+    }
+
+    .section-left {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .section-right {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .left-middle {
+        grid-template-columns: 30% 70%;
+    }
+
+    .attribution {
+        display: block;
+    }
+}
