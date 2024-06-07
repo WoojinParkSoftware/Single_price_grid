@@ -55,7 +55,7 @@ body {
 .section-top {
     background-color: var(--White);
     row-gap: 1em;
-    /* gap between rows(each element) with in section */
+    /* gap between rows(each element) within section */
 }
 
 .section-top .header {
@@ -107,7 +107,7 @@ body {
 
 .left-middle {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 25% 75%; /*first and second column*/
     align-items: center;
     padding: .5em 0 0;
 }
